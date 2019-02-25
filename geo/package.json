@@ -7,9 +7,15 @@
     "test": "jest"
   },
   "dependencies": {
+    "@monterosa/react-native-parallax-scroll": "^1.8.0",
     "react": "16.6.3",
-    "react-native": "0.58.3",
-    "react-native-background-geolocation": "^2.14.2"
+    "react-native": "^0.58.4",
+    "react-native-background-geolocation": "^2.14.2",
+    "react-native-card-view": "0.0.3",
+    "react-native-gesture-handler": "^1.0.15",
+    "react-native-local-mongodb": "^2.2.5",
+    "react-native-material-cards": "^1.0.9",
+    "react-navigation": "^3.3.0"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",

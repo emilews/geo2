@@ -1,10 +1,17 @@
 // Import BackgroundGeolocation + any optional interfaces
 import BackgroundGeolocation from "react-native-background-geolocation";
 import React, { Component } from 'react'
-import { View, Text } from 'react-native';
+import {AsyncStorage, Button, View, Text, TextInput, ToastAndroid } from 'react-native';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
 
-
-export default class App extends Component {
+class HomeScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {  
+      version: '1.0',
+      ip: 'http://187.158.48.31/locations'
+    };
+  }
   componentWillMount() {
     ////
     // 1.  Wire up event-listeners
@@ -37,14 +44,12 @@ export default class App extends Component {
       stopOnTerminate: false,   // <-- Allow the background-service to continue tracking when user closes the app.
       startOnBoot: true,        // <-- Auto start tracking when device is powered-up.
       // HTTP / SQLite config
-      url: 'http://192.168.1.71:8081/data',
+      url: 'http://187.158.48.31/locations',
       batchSync: false,       // <-- [Default: false] Set true to sync locations to server in a single HTTP request.
       autoSync: true,         // <-- [Default: true] Set true to sync each location to server as it arrives.
       headers: {              // <-- Optional HTTP headers
-        "X-FOO": "bar"
       },
       params: {               // <-- Optional HTTP params
-        "auth_token": "maybe_your_server_authenticates_via_token_YES?"
       }
     }, (state) => {
       console.log("- BackgroundGeolocation is configured and ready: ", state.enabled);
@@ -55,6 +60,7 @@ export default class App extends Component {
         //
         BackgroundGeolocation.start(function() {
           console.log("- Start success");
+
         });
       }
     });
@@ -79,11 +85,48 @@ export default class App extends Component {
   onMotionChange(event) {
     console.log('[motionchange] -', event.isMoving, event.location);
   }
+
   render() {
     return (
-      <View>
-        
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <Text>Welcome to Alpha {this.state.version}!</Text>
+        <Button
+          title="Settings"
+          onPress={() => this.props.navigation.navigate('Settings')}
+        />
+        <Text>Server: {this.state.ip}</Text>
+      </View>
+    );
+  }
+}  
+class SettingsPanel extends Component{
+  constructor(props) {
+    super(props);
+    this.state = { 
+      ip: '',
+      was: false
+   };
+  }
+  componentWillMount() { 
+  }
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center", color: "Blue" }}>
+        <Text>Coming soon!</Text>
       </View>
     );
   }
 }
+
+
+const AppNavigator = createStackNavigator(
+  {
+    Home: HomeScreen,
+    Settings: SettingsPanel
+  },
+  {
+    initialRouteName: "Home"
+  }
+  );
+
+export default createAppContainer(AppNavigator);

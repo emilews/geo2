@@ -46,6 +46,7 @@
 		9B5DA4BFC35E456D8B20A21C /* libRNBackgroundFetch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E37EEBFA75F74B5288575D15 /* libRNBackgroundFetch.a */; };
 		FD3FE578887E412286DDD60D /* TSBackgroundFetch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F751C7E9C604301BD143C89 /* TSBackgroundFetch.framework */; };
 		A88BDD9CBC4F4F75A33B730B /* RNBackgroundFetch+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B848835C43409F872A8155 /* RNBackgroundFetch+AppDelegate.m */; };
+		2855ACA236E24F9C945EB34F /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB10197B0F544BF49FA1EE03 /* libRNGestureHandler.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -362,6 +363,8 @@
 		E37EEBFA75F74B5288575D15 /* libRNBackgroundFetch.a */ = {isa = PBXFileReference; name = "libRNBackgroundFetch.a"; path = "libRNBackgroundFetch.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		5F751C7E9C604301BD143C89 /* TSBackgroundFetch.framework */ = {isa = PBXFileReference; name = "TSBackgroundFetch.framework"; path = "../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/TSBackgroundFetch.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		D4B848835C43409F872A8155 /* RNBackgroundFetch+AppDelegate.m */ = {isa = PBXFileReference; name = "RNBackgroundFetch+AppDelegate.m"; path = "../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/RNBackgroundFetch+AppDelegate.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F9A87042EB78459D90CD40A1 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		CB10197B0F544BF49FA1EE03 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +399,7 @@
 				362104D2A3114647B8E16AF8 /* TSLocationManager.framework in Frameworks */,
 				9B5DA4BFC35E456D8B20A21C /* libRNBackgroundFetch.a in Frameworks */,
 				FD3FE578887E412286DDD60D /* TSBackgroundFetch.framework in Frameworks */,
+				2855ACA236E24F9C945EB34F /* libRNGestureHandler.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +596,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				D4C76C88D1DB45F7BF3DDBD3 /* RNBackgroundGeolocation.xcodeproj */,
 				F892DBEAE5FC4AD699E23BA8 /* RNBackgroundFetch.xcodeproj */,
+				F9A87042EB78459D90CD40A1 /* RNGestureHandler.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1229,11 +1234,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-background-geolocation\ios\RNBackgroundGeolocation/**",
 					"$(SRCROOT)\..\node_modules\react-native-background-fetch\ios\RNBackgroundFetch/**",
+					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/..\node_modules\react-native-background-geolocation\ios/**",
@@ -1261,11 +1268,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-background-geolocation\ios\RNBackgroundGeolocation/**",
 					"$(SRCROOT)\..\node_modules\react-native-background-fetch\ios\RNBackgroundFetch/**",
+					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/..\node_modules\react-native-background-geolocation\ios/**",
@@ -1294,6 +1303,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-background-geolocation\ios\RNBackgroundGeolocation/**",
 					"$(SRCROOT)\..\node_modules\react-native-background-fetch\ios\RNBackgroundFetch/**",
+					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/..\node_modules\react-native-background-geolocation\ios/**",
@@ -1321,6 +1331,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-background-geolocation\ios\RNBackgroundGeolocation/**",
 					"$(SRCROOT)\..\node_modules\react-native-background-fetch\ios\RNBackgroundFetch/**",
+					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/..\node_modules\react-native-background-geolocation\ios/**",
@@ -1356,11 +1367,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-background-geolocation\ios\RNBackgroundGeolocation/**",
 					"$(SRCROOT)\..\node_modules\react-native-background-fetch\ios\RNBackgroundFetch/**",
+					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/..\node_modules\react-native-background-geolocation\ios/**",
@@ -1396,11 +1409,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-background-geolocation\ios\RNBackgroundGeolocation/**",
 					"$(SRCROOT)\..\node_modules\react-native-background-fetch\ios\RNBackgroundFetch/**",
+					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/..\node_modules\react-native-background-geolocation\ios/**",
@@ -1435,11 +1450,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-background-geolocation\ios\RNBackgroundGeolocation/**",
 					"$(SRCROOT)\..\node_modules\react-native-background-fetch\ios\RNBackgroundFetch/**",
+					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/..\node_modules\react-native-background-geolocation\ios/**",
@@ -1474,11 +1491,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-background-geolocation\ios\RNBackgroundGeolocation/**",
 					"$(SRCROOT)\..\node_modules\react-native-background-fetch\ios\RNBackgroundFetch/**",
+					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/..\node_modules\react-native-background-geolocation\ios/**",
